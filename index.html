@@ -789,35 +789,63 @@ svg.leaflet-image-layer.leaflet-interactive path {
 </footer>
 
 <script id="data-chokepoints" type="application/json">{
-  "generated": "2026-07-23",
+  "generated": "2026-09-17",
   "chokepoints": [
     {
       "id": "hormuz",
       "name": "Détroit d'Ormuz",
-      "coords": [26.55, 56.25],
-      "resource_flags": ["oil", "gas_lng"],
-      "risk_tags": ["militaire", "sanctions"],
+      "coords": [
+        26.55,
+        56.25
+      ],
+      "resource_flags": [
+        "oil",
+        "gas_lng"
+      ],
+      "risk_tags": [
+        "militaire",
+        "sanctions"
+      ],
       "stats": {
         "oil_share_global_pct": "20-27",
         "oil_share_note": "~20% de la consommation mondiale de pétrole liquide (EIA) ; jusqu'à 25-27% du commerce maritime mondial de pétrole selon les sources",
         "oil_volume_bpd": "~20 millions bpd (2024, EIA)",
         "gas_lng_share_global_pct": "20",
         "gas_lng_note": "~20% du commerce mondial de GNL (2023-2024, EIA), dominé par le Qatar (~9,3 Bcf/j)",
-        "destinations": "84% du pétrole et 83% du GNL transitant par Ormuz partent vers l'Asie (2024) ; Chine+Inde+Corée du Sud = 52% des flux GNL"
+        "destinations": "84% du pétrole et 83% du GNL transitant par Ormuz partent vers l'Asie (2024) ; Chine+Inde+Corée du Sud = 52% des flux GNL",
+        "situation_septembre_2026": "8 transits enregistrés le 13 septembre 2026 (IMF PortWatch) contre une référence pré-crise d'environ 85/jour, soit ~9% ; flux de brut tombés à ~4,9 millions bpd au T2 2026 contre 21,6 millions avant le conflit (EIA) ; détroit de fait fermé au commerce de routine"
       },
       "exporters_dependent": [
-        {"country": "Arabie Saoudite", "note": "37,2% du brut/condensat transitant par Ormuz"},
-        {"country": "Irak", "note": "quasi-totalité des exportations via Bassorah"},
-        {"country": "Koweït", "note": "quasi-totalité des exportations maritimes"},
-        {"country": "Qatar", "note": "leader mondial du GNL, dépendant à quasi 100%"},
-        {"country": "Émirats arabes unis", "note": "majorité du brut, une partie déviée vers Fujairah"},
-        {"country": "Iran", "note": "dépendant pour ses propres exportations"}
+        {
+          "country": "Arabie Saoudite",
+          "note": "37,2% du brut/condensat transitant par Ormuz"
+        },
+        {
+          "country": "Irak",
+          "note": "quasi-totalité des exportations via Bassorah"
+        },
+        {
+          "country": "Koweït",
+          "note": "quasi-totalité des exportations maritimes"
+        },
+        {
+          "country": "Qatar",
+          "note": "leader mondial du GNL, dépendant à quasi 100%"
+        },
+        {
+          "country": "Émirats arabes unis",
+          "note": "majorité du brut, une partie déviée vers Fujairah"
+        },
+        {
+          "country": "Iran",
+          "note": "dépendant pour ses propres exportations"
+        }
       ],
       "alternatives": [
         {
           "name": "Pipeline Est-Ouest saoudien (Petroline)",
-          "capacity": "capacité physique max ~7 millions bpd (record mars 2026, Aramco/S&P Global) ; nominal ~5M bpd",
-          "limit": "goulot d'étranglement au terminal de Yanbu : chargements réels souvent limités à 3-4M bpd malgré la capacité du pipeline",
+          "capacity": "capacité physique max ~7 millions bpd (record mars 2026, Aramco/S&P Global) ; nominal ~5M bpd — À L'ARRÊT depuis le 11 septembre 2026",
+          "limit": "fermé à titre préventif après des frappes de drones sur des stations de pompage les 10-11 septembre 2026 ; acheminait alors 4-5M bpd détournés d'Ormuz ; stocks de Yanbu estimés à ~15 Mb, soit 4 à 7 jours (Kpler/Rystad) ; pas d'alternative capable d'absorber le même volume vers Yanbu",
           "route_id": "pipeline_petroline"
         },
         {
@@ -843,25 +871,60 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "period": "13-19 juillet 2026",
           "event": "Trafic non lié à l'Iran tombé à 25 navires contre 108 la semaine précédente (-90% sur un an) ; transits entrants au plus bas depuis les pics de fin de guerre",
           "source": "Lloyd's List Intelligence (21 juillet 2026)"
+        },
+        {
+          "period": "10-11 septembre 2026",
+          "event": "Frappes de drones lancées depuis l'Irak sur le pipeline Est-Ouest saoudien, principal contournement d'Ormuz : fermeture préventive, Brent au-dessus de 110 $ avant de refluer vers 105 $, première clôture au-dessus de 100 $ depuis mai ; offre saoudienne au plus bas depuis plus de trente ans selon l'AIE",
+          "source": "Al Jazeera ; CNN Business ; FDD (septembre 2026)"
         }
       ],
       "cost_if_closed": "Estimations très variables : Goldman Sachs anticipe un Brent à ~120$/bbl, JPMorgan 120-130$ (jusqu'à 150$ si prolongé). Perte de revenus pétroliers estimée à ~1,1 milliard $/jour pour les pays du Golfe + Irak. Valeur annuelle du commerce énergétique transitant par le détroit : ~500 milliards $.",
       "sources": [
-        {"label": "EIA — Strait of Hormuz", "url": "https://www.eia.gov/todayinenergy/detail.php?id=61002"},
-        {"label": "IEA — Strait of Hormuz", "url": "https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz"},
-        {"label": "Visual Capitalist — Hormuz oil trade by country", "url": "https://www.visualcapitalist.com/charted-oil-trade-through-the-strait-of-hormuz-by-country/"},
-        {"label": "Energy Intelligence — Petroline 7M bpd", "url": "https://www.energyintel.com/0000019d-86e9-d588-a19d-9efbe44e0000"},
-        {"label": "Kpler — pipelines de contournement d'Ormuz (jul 2026)", "url": "https://www.kpler.com/blog/new-pipelines-bypassing-the-strait-of-hormuz-could-come-online-in-1-2-years"},
-        {"label": "Wikipedia — 2026 Strait of Hormuz crisis", "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"},
-        {"label": "Al Jazeera — Hormuz tensions", "url": "https://www.aljazeera.com/news/2026/2/22/iran-us-tensions-what-would-blocking-strait-of-hormuz-mean-for-oil-lng"}
+        {
+          "label": "EIA — Strait of Hormuz",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=61002"
+        },
+        {
+          "label": "IEA — Strait of Hormuz",
+          "url": "https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz"
+        },
+        {
+          "label": "Visual Capitalist — Hormuz oil trade by country",
+          "url": "https://www.visualcapitalist.com/charted-oil-trade-through-the-strait-of-hormuz-by-country/"
+        },
+        {
+          "label": "Energy Intelligence — Petroline 7M bpd",
+          "url": "https://www.energyintel.com/0000019d-86e9-d588-a19d-9efbe44e0000"
+        },
+        {
+          "label": "Kpler — pipelines de contournement d'Ormuz (jul 2026)",
+          "url": "https://www.kpler.com/blog/new-pipelines-bypassing-the-strait-of-hormuz-could-come-online-in-1-2-years"
+        },
+        {
+          "label": "Wikipedia — 2026 Strait of Hormuz crisis",
+          "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        },
+        {
+          "label": "Al Jazeera — Hormuz tensions",
+          "url": "https://www.aljazeera.com/news/2026/2/22/iran-us-tensions-what-would-blocking-strait-of-hormuz-mean-for-oil-lng"
+        }
       ]
     },
     {
       "id": "malacca",
       "name": "Détroit de Malacca",
-      "coords": [2.5, 101.0],
-      "resource_flags": ["oil", "container"],
-      "risk_tags": ["militaire", "climatique"],
+      "coords": [
+        2.5,
+        101.0
+      ],
+      "resource_flags": [
+        "oil",
+        "container"
+      ],
+      "risk_tags": [
+        "militaire",
+        "climatique"
+      ],
       "stats": {
         "trade_share_global_pct": "22-33 (les estimations varient largement selon la définition du commerce mesuré)",
         "oil_share_global_pct": "29",
@@ -869,8 +932,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "flows_note": "brut du Moyen-Orient vers Chine, Japon, Corée du Sud"
       },
       "exporters_dependent": [
-        {"country": "Arabie Saoudite / Golfe", "note": "brut destiné à l'Asie du Nord-Est"},
-        {"country": "Chine, Japon, Corée du Sud", "note": "principaux importateurs dépendants de ce passage"}
+        {
+          "country": "Arabie Saoudite / Golfe",
+          "note": "brut destiné à l'Asie du Nord-Est"
+        },
+        {
+          "country": "Chine, Japon, Corée du Sud",
+          "note": "principaux importateurs dépendants de ce passage"
+        }
       ],
       "alternatives": [
         {
@@ -890,16 +959,32 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "disruption_history": [],
       "cost_if_closed": "Pas de fermeture historique documentée ; risque principal = tensions Chine/Taïwan/mer de Chine méridionale pouvant affecter la navigation",
       "sources": [
-        {"label": "EIA — Strait of Malacca", "url": "https://www.eia.gov/todayinenergy/detail.php?id=32452"},
-        {"label": "Eurasia Review — Lombok Strait alternative", "url": "https://www.eurasiareview.com/11052026-lombok-strait-as-an-alternative-to-the-malacca-strait-prospects-and-challenges-analysis/"}
+        {
+          "label": "EIA — Strait of Malacca",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=32452"
+        },
+        {
+          "label": "Eurasia Review — Lombok Strait alternative",
+          "url": "https://www.eurasiareview.com/11052026-lombok-strait-as-an-alternative-to-the-malacca-strait-prospects-and-challenges-analysis/"
+        }
       ]
     },
     {
       "id": "suez",
       "name": "Canal de Suez",
-      "coords": [30.5, 32.35],
-      "resource_flags": ["oil", "container", "gas_lng"],
-      "risk_tags": ["militaire", "sanctions"],
+      "coords": [
+        30.5,
+        32.35
+      ],
+      "resource_flags": [
+        "oil",
+        "container",
+        "gas_lng"
+      ],
+      "risk_tags": [
+        "militaire",
+        "sanctions"
+      ],
       "stats": {
         "trade_share_global_pct": "12 (valeur) / 22-30 (volume conteneurs, selon UNCTAD/WEF)",
         "transits_2023": 26434,
@@ -908,7 +993,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "note": "chute d'environ 50% des transits annuels soutenue depuis 2024 ; trafic conteneurs jusqu'à -70 à -90% au pic ; T4 2025 encore -86% vs 2023"
       },
       "exporters_dependent": [
-        {"country": "Égypte", "note": "revenus du canal en chute de ~6-7 milliards $ en 2024 vs 2023 (base ~9,4Md$ en 2023)"}
+        {
+          "country": "Égypte",
+          "note": "revenus du canal en chute de ~6-7 milliards $ en 2024 vs 2023 (base ~9,4Md$ en 2023)"
+        }
       ],
       "alternatives": [
         {
@@ -934,19 +1022,43 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "cost_if_closed": "Voir section Bab-el-Mandeb/mer Rouge (les deux chokepoints sont liés)",
       "sources": [
-        {"label": "UNCTAD — Navigating Troubled Waters (2024)", "url": "https://unctad.org/publication/navigating-troubled-waters-impact-global-trade-disruption-shipping-routes-red-sea-black"},
-        {"label": "gCaptain — Suez traffic -60%", "url": "https://gcaptain.com/suez-canal-traffic-stalls-at-60-below-normal-despite-100-days-without-houthi-attacks/"},
-        {"label": "Atlantic Council — Suez Canal security", "url": "https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/a-lifeline-under-threat-why-the-suez-canals-security-matters-for-the-world/"},
-        {"label": "Egypt Independent — SUMED +150%", "url": "https://www.egyptindependent.com/egypts-sumed-oil-flows-jump-150-on-red-sea-trade-rerouting/"},
-        {"label": "SAFETY4SEA — coût contournement Cap", "url": "https://safety4sea.com/an-extra-million-is-added-each-time-a-tanker-goes-around-cape-of-good-hope/"}
+        {
+          "label": "UNCTAD — Navigating Troubled Waters (2024)",
+          "url": "https://unctad.org/publication/navigating-troubled-waters-impact-global-trade-disruption-shipping-routes-red-sea-black"
+        },
+        {
+          "label": "gCaptain — Suez traffic -60%",
+          "url": "https://gcaptain.com/suez-canal-traffic-stalls-at-60-below-normal-despite-100-days-without-houthi-attacks/"
+        },
+        {
+          "label": "Atlantic Council — Suez Canal security",
+          "url": "https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/a-lifeline-under-threat-why-the-suez-canals-security-matters-for-the-world/"
+        },
+        {
+          "label": "Egypt Independent — SUMED +150%",
+          "url": "https://www.egyptindependent.com/egypts-sumed-oil-flows-jump-150-on-red-sea-trade-rerouting/"
+        },
+        {
+          "label": "SAFETY4SEA — coût contournement Cap",
+          "url": "https://safety4sea.com/an-extra-million-is-added-each-time-a-tanker-goes-around-cape-of-good-hope/"
+        }
       ]
     },
     {
       "id": "panama",
       "name": "Canal de Panama",
-      "coords": [9.08, -79.68],
-      "resource_flags": ["container", "gas_lng", "wheat"],
-      "risk_tags": ["climatique"],
+      "coords": [
+        9.08,
+        -79.68
+      ],
+      "resource_flags": [
+        "container",
+        "gas_lng",
+        "wheat"
+      ],
+      "risk_tags": [
+        "climatique"
+      ],
       "stats": {
         "trade_share_global_pct": "~5",
         "transits_normal_per_year": "13000+",
@@ -955,7 +1067,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "note": "sécheresse 2023-2024 : transits/jour tombés de 36-38 à un plancher de 18-24 (février-mars 2024)"
       },
       "exporters_dependent": [
-        {"country": "USA (Gulf Coast)", "note": "GNL et céréales vers l'Asie"}
+        {
+          "country": "USA (Gulf Coast)",
+          "note": "GNL et céréales vers l'Asie"
+        }
       ],
       "alternatives": [
         {
@@ -975,22 +1090,43 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "cost_if_closed": "Impact concentré sur GNL, céréales et conteneurs Asie-USA ; la reprise post-sécheresse (2024) montre une capacité de résilience mais avec réallocation durable du trafic LNG",
       "sources": [
-        {"label": "Kuehne+Nagel — Panama Canal post-drought", "url": "https://mykn.kuehne-nagel.com/news/article/panama-canal-has-plenty-of-water-10-jul-2025"},
-        {"label": "Lloyd's List — Panama Canal drought lessons", "url": "https://www.lloydslist.com/LL1150943/The-lessons-of-Panama-Canal-drought-for-future-shipping-routes"}
+        {
+          "label": "Kuehne+Nagel — Panama Canal post-drought",
+          "url": "https://mykn.kuehne-nagel.com/news/article/panama-canal-has-plenty-of-water-10-jul-2025"
+        },
+        {
+          "label": "Lloyd's List — Panama Canal drought lessons",
+          "url": "https://www.lloydslist.com/LL1150943/The-lessons-of-Panama-Canal-drought-for-future-shipping-routes"
+        }
       ]
     },
     {
       "id": "bosphorus",
       "name": "Bosphore / Détroits turcs",
-      "coords": [41.0, 29.0],
-      "resource_flags": ["oil", "wheat"],
-      "risk_tags": ["militaire", "sanctions"],
+      "coords": [
+        41.0,
+        29.0
+      ],
+      "resource_flags": [
+        "oil",
+        "wheat"
+      ],
+      "risk_tags": [
+        "militaire",
+        "sanctions"
+      ],
       "stats": {
         "note": "Régi par la Convention de Montreux (1936) ; la Turquie restreint le passage des navires de guerre depuis 2022 mais le trafic commercial/pétrolier civil continue"
       },
       "exporters_dependent": [
-        {"country": "Russie", "note": "flotte fantôme : seulement 34% du brut/produits russes transportés via des tankers conformes au plafond de prix G7 en sept. 2024 ; ~66% via la flotte fantôme"},
-        {"country": "Ukraine", "note": "corridor céréalier propre depuis juillet 2023 via Odesa/Tchornomorsk/Pivdennyi jusqu'au Bosphore"}
+        {
+          "country": "Russie",
+          "note": "flotte fantôme : seulement 34% du brut/produits russes transportés via des tankers conformes au plafond de prix G7 en sept. 2024 ; ~66% via la flotte fantôme"
+        },
+        {
+          "country": "Ukraine",
+          "note": "corridor céréalier propre depuis juillet 2023 via Odesa/Tchornomorsk/Pivdennyi jusqu'au Bosphore"
+        }
       ],
       "alternatives": [
         {
@@ -1010,24 +1146,42 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "cost_if_closed": "Risque surtout géopolitique (Montreux) plutôt qu'un blocage physique ; impact principal = exportations céréalières et pétrolières russes/ukrainiennes",
       "sources": [
-        {"label": "CREA — Russian fossil fuel exports & sanctions (sept 2024)", "url": "https://energyandcleanair.org/september-2024-monthly-analysis-of-russian-fossil-fuel-exports-and-sanctions/"},
-        {"label": "Consilium — Ukrainian grain exports explained", "url": "https://www.consilium.europa.eu/en/infographics/ukrainian-grain-exports-explained/"}
+        {
+          "label": "CREA — Russian fossil fuel exports & sanctions (sept 2024)",
+          "url": "https://energyandcleanair.org/september-2024-monthly-analysis-of-russian-fossil-fuel-exports-and-sanctions/"
+        },
+        {
+          "label": "Consilium — Ukrainian grain exports explained",
+          "url": "https://www.consilium.europa.eu/en/infographics/ukrainian-grain-exports-explained/"
+        }
       ]
     },
     {
       "id": "bab_el_mandeb",
       "name": "Bab-el-Mandeb / Mer Rouge",
-      "coords": [12.6, 43.3],
-      "resource_flags": ["oil", "container"],
-      "risk_tags": ["militaire"],
+      "coords": [
+        12.6,
+        43.3
+      ],
+      "resource_flags": [
+        "oil",
+        "container"
+      ],
+      "risk_tags": [
+        "militaire"
+      ],
       "stats": {
         "trade_share_global_pct": "12 (valeur) / jusqu'à 30 (conteneurs, chiffre qui recoupe Suez)",
         "weekly_transits_2024": 252,
         "weekly_transits_baseline": 459,
-        "note": "baisse de 48% des transits hebdomadaires en 2024 vs référence pré-crise"
+        "note": "baisse de 48% des transits hebdomadaires en 2024 vs référence pré-crise",
+        "situation_septembre_2026": "8,1 millions bpd de brut et liquides au T2 2026 contre 5,4 millions au T4 2025 (EIA), le détroit absorbant le trafic détourné d'Ormuz ; capacité conteneurisée à ~213 000 EVP/semaine en août 2026, soit le double d'un an plus tôt mais seulement 23% des niveaux d'août 2023 (Xeneta)"
       },
       "exporters_dependent": [
-        {"country": "Arabie Saoudite", "note": "chargements pétroliers en baisse de 36% en juillet 2026 à cause des tensions renouvelées à Bab-el-Mandeb"}
+        {
+          "country": "Arabie Saoudite",
+          "note": "chargements pétroliers en baisse de 36% en juillet 2026 à cause des tensions renouvelées à Bab-el-Mandeb"
+        }
       ],
       "alternatives": [
         {
@@ -1053,12 +1207,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "period": "20-22 juillet 2026",
           "event": "Blocus formel du détroit déclaré par les Houthis, qui menacent aussi l'Arabie Saoudite ; au moins 4 pétroliers vers l'Inde et la Chine font demi-tour pour passer par Suez",
           "source": "Forbes ; CNN ; Al Jazeera (22 juillet 2026)"
+        },
+        {
+          "period": "septembre 2026",
+          "event": "Prise par les Houthis d'un port et de l'île de Mayun (Perim), à l'entrée sud du détroit : contrôle territorial consolidé sur l'approche de Suez au moment où Cosco et OOCL reprennent des transits ; les deux principaux chokepoints de la région sont désormais compromis simultanément",
+          "source": "FreightWaves ; Sourcing Journal ; Logistics Middle East (septembre 2026)"
         }
       ],
       "cost_if_closed": "Voir ci-dessus (couplé à Suez)",
       "sources": [
-        {"label": "Insurance Business — Houthi blockade & insurers", "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/houthis-declare-red-sea-blockade--and-insurers-face-a-twofront-crisis-578048.aspx"},
-        {"label": "The National — Saudi oil loadings -36% (jul 2026)", "url": "https://www.thenationalnews.com/business/energy/2026/07/20/saudi-oil-loadings-drop-by-36-as-houthi-threats-disrupt-bab-al-mandeb-passage/"}
+        {
+          "label": "Insurance Business — Houthi blockade & insurers",
+          "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/houthis-declare-red-sea-blockade--and-insurers-face-a-twofront-crisis-578048.aspx"
+        },
+        {
+          "label": "The National — Saudi oil loadings -36% (jul 2026)",
+          "url": "https://www.thenationalnews.com/business/energy/2026/07/20/saudi-oil-loadings-drop-by-36-as-houthi-threats-disrupt-bab-al-mandeb-passage/"
+        }
       ]
     }
   ],
@@ -1068,92 +1233,368 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "label": "Moyen-Orient → Asie (pétrole/GNL, via Ormuz + Malacca)",
       "type": "maritime",
       "resource": "oil",
-      "chokepoints": ["hormuz", "malacca"],
-      "path": [[26.6,50.2],[26.5,56.25],[15,65],[5,80],[5,98],[2.5,101],[5,110],[15,112],[22,114]]
+      "chokepoints": [
+        "hormuz",
+        "malacca"
+      ],
+      "path": [
+        [
+          26.6,
+          50.2
+        ],
+        [
+          26.5,
+          56.25
+        ],
+        [
+          15,
+          65
+        ],
+        [
+          5,
+          80
+        ],
+        [
+          5,
+          98
+        ],
+        [
+          2.5,
+          101
+        ],
+        [
+          5,
+          110
+        ],
+        [
+          15,
+          112
+        ],
+        [
+          22,
+          114
+        ]
+      ]
     },
     {
       "id": "route_me_europe",
       "label": "Moyen-Orient → Europe (via Ormuz, Bab-el-Mandeb, Suez)",
       "type": "maritime",
       "resource": "oil",
-      "chokepoints": ["hormuz", "bab_el_mandeb", "suez"],
-      "path": [[26.6,50.2],[26.5,56.25],[15,60],[12.6,43.3],[20,38],[30.5,32.35],[34,20],[42,10],[51.9,4.5]]
+      "chokepoints": [
+        "hormuz",
+        "bab_el_mandeb",
+        "suez"
+      ],
+      "path": [
+        [
+          26.6,
+          50.2
+        ],
+        [
+          26.5,
+          56.25
+        ],
+        [
+          15,
+          60
+        ],
+        [
+          12.6,
+          43.3
+        ],
+        [
+          20,
+          38
+        ],
+        [
+          30.5,
+          32.35
+        ],
+        [
+          34,
+          20
+        ],
+        [
+          42,
+          10
+        ],
+        [
+          51.9,
+          4.5
+        ]
+      ]
     },
     {
       "id": "route_cape",
       "label": "Contournement du Cap de Bonne-Espérance (alternative à Suez/Bab-el-Mandeb)",
       "type": "alternative",
       "resource": "oil",
-      "alternative_to": ["suez", "bab_el_mandeb"],
-      "path": [[26.6,50.2],[10,55],[-10,45],[-30,35],[-34.4,18.5],[-10,10],[10,-5],[30,-10],[51.9,4.5]]
+      "alternative_to": [
+        "suez",
+        "bab_el_mandeb"
+      ],
+      "path": [
+        [
+          26.6,
+          50.2
+        ],
+        [
+          10,
+          55
+        ],
+        [
+          -10,
+          45
+        ],
+        [
+          -30,
+          35
+        ],
+        [
+          -34.4,
+          18.5
+        ],
+        [
+          -10,
+          10
+        ],
+        [
+          10,
+          -5
+        ],
+        [
+          30,
+          -10
+        ],
+        [
+          51.9,
+          4.5
+        ]
+      ]
     },
     {
       "id": "pipeline_petroline",
       "label": "Pipeline Est-Ouest saoudien (Petroline) — contournement d'Ormuz",
       "type": "pipeline",
       "resource": "oil",
-      "alternative_to": ["hormuz"],
-      "path": [[25.9,49.6],[24.1,38.1]]
+      "alternative_to": [
+        "hormuz"
+      ],
+      "path": [
+        [
+          25.9,
+          49.6
+        ],
+        [
+          24.1,
+          38.1
+        ]
+      ]
     },
     {
       "id": "pipeline_fujairah",
       "label": "Pipeline Habshan-Fujairah (EAU) — contournement d'Ormuz",
       "type": "pipeline",
       "resource": "oil",
-      "alternative_to": ["hormuz"],
-      "path": [[23.9,53.6],[25.1,56.3]]
+      "alternative_to": [
+        "hormuz"
+      ],
+      "path": [
+        [
+          23.9,
+          53.6
+        ],
+        [
+          25.1,
+          56.3
+        ]
+      ]
     },
     {
       "id": "pipeline_sumed",
       "label": "Pipeline SUMED — alternative au Canal de Suez",
       "type": "pipeline",
       "resource": "oil",
-      "alternative_to": ["suez"],
-      "path": [[27.3,33.9],[31.3,32.3]]
+      "alternative_to": [
+        "suez"
+      ],
+      "path": [
+        [
+          27.3,
+          33.9
+        ],
+        [
+          31.3,
+          32.3
+        ]
+      ]
     },
     {
       "id": "route_lombok",
       "label": "Détroit de Lombok — alternative à Malacca",
       "type": "alternative",
       "resource": "oil",
-      "alternative_to": ["malacca"],
-      "path": [[5,98],[-8,116],[-8.7,115.7],[-5,118],[5,110]]
+      "alternative_to": [
+        "malacca"
+      ],
+      "path": [
+        [
+          5,
+          98
+        ],
+        [
+          -8,
+          116
+        ],
+        [
+          -8.7,
+          115.7
+        ],
+        [
+          -5,
+          118
+        ],
+        [
+          5,
+          110
+        ]
+      ]
     },
     {
       "id": "route_sunda",
       "label": "Détroit de la Sonde — alternative à Malacca (navires moyens)",
       "type": "alternative",
       "resource": "oil",
-      "alternative_to": ["malacca"],
-      "path": [[5,98],[-6,105.8],[-8,112]]
+      "alternative_to": [
+        "malacca"
+      ],
+      "path": [
+        [
+          5,
+          98
+        ],
+        [
+          -6,
+          105.8
+        ],
+        [
+          -8,
+          112
+        ]
+      ]
     },
     {
       "id": "route_panama_asia",
       "label": "USA (Gulf Coast) → Asie via Panama (GNL, céréales, conteneurs)",
       "type": "maritime",
       "resource": "gas_lng",
-      "chokepoints": ["panama"],
-      "path": [[29,-90],[9.08,-79.68],[0,-100],[10,-140],[22,-160],[22,114]]
+      "chokepoints": [
+        "panama"
+      ],
+      "path": [
+        [
+          29,
+          -90
+        ],
+        [
+          9.08,
+          -79.68
+        ],
+        [
+          0,
+          -100
+        ],
+        [
+          10,
+          -140
+        ],
+        [
+          22,
+          -160
+        ],
+        [
+          22,
+          114
+        ]
+      ]
     },
     {
       "id": "route_ukraine_grain",
       "label": "Corridor céréalier ukrainien (Odesa → Bosphore → Méditerranée)",
       "type": "maritime",
       "resource": "wheat",
-      "chokepoints": ["bosphorus"],
-      "path": [[46.5,30.7],[41,29],[36,20],[31,30],[38,15]]
+      "chokepoints": [
+        "bosphorus"
+      ],
+      "path": [
+        [
+          46.5,
+          30.7
+        ],
+        [
+          41,
+          29
+        ],
+        [
+          36,
+          20
+        ],
+        [
+          31,
+          30
+        ],
+        [
+          38,
+          15
+        ]
+      ]
     },
     {
       "id": "route_russia_shadowfleet",
       "label": "Flotte fantôme russe → Inde/Chine (contournement des sanctions)",
       "type": "alternative",
       "resource": "oil",
-      "alternative_to": ["sanctions_eu"],
-      "path": [[60,28],[56,3],[45,-10],[-34.4,18.5],[-10,60],[15,73],[2.5,101],[22,114]]
+      "alternative_to": [
+        "sanctions_eu"
+      ],
+      "path": [
+        [
+          60,
+          28
+        ],
+        [
+          56,
+          3
+        ],
+        [
+          45,
+          -10
+        ],
+        [
+          -34.4,
+          18.5
+        ],
+        [
+          -10,
+          60
+        ],
+        [
+          15,
+          73
+        ],
+        [
+          2.5,
+          101
+        ],
+        [
+          22,
+          114
+        ]
+      ]
     }
   ]
-}
-</script>
+}</script>
 <script id="data-commodities" type="application/json">{
   "generated": "2026-07-23",
   "resources": {
@@ -1624,14 +2065,259 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 </script>
 <script id="data-news" type="application/json">{
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-09-17",
   "update_method": "Envoie un lien ou une capture d'écran à Claude, ou demande \"actualise tout\" / \"mets à jour les news\" — Claude met à jour ce fichier et régénère automatiquement index.html. Voir README_MAJ.md pour le détail.",
   "items": [
     {
+      "date": "2026-09-16",
+      "market": "Énergie",
+      "countries": [
+        "qatar",
+        "south_korea",
+        "china"
+      ],
+      "resources": [
+        "gas_lng"
+      ],
+      "headline": "Le JKM à 27,77 $/MMBtu, plus haut depuis janvier 2023, sur la panne prolongée de Ras Laffan",
+      "summary": "Le contrat novembre du Japan Korea Marker a clôturé à 27,765 $/MMBtu, en hausse de 30,9% sur un mois et de 71,6% sur six mois. Deux des quatorze trains de liquéfaction de Ras Laffan, endommagés par la frappe iranienne de mars, resteront hors service trois à cinq ans selon QatarEnergy, soit environ 12,8 Mt/an de capacité indisponible. Doha négocierait des contrats long terme avec des fournisseurs américains jusqu'en 2031 pour combler le manque.",
+      "source": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/qatar-lng-shock-raises-winter-bill-fears-gas-prices-at-near-4year-high/12878495"
+    },
+    {
+      "date": "2026-09-15",
+      "market": "Énergie",
+      "countries": [
+        "saudi_arabia",
+        "iran",
+        "iraq"
+      ],
+      "resources": [
+        "oil"
+      ],
+      "headline": "Le Brent autour de 107-109 $, +20% sur un mois après la fermeture du pipeline Est-Ouest",
+      "summary": "Le Brent s'échangeait à 109,21 $/bbl le 15 septembre, en hausse de 20,2% sur un mois et de 59,5% sur un an. Aramco n'a pas communiqué de calendrier de redémarrage du pipeline Est-Ouest et Riyad cherche à augmenter ses expéditions via Ormuz pour compenser. La Libye a par ailleurs suspendu l'activité de plusieurs champs et évoqué une force majeure, tandis que la Chine relève ses commandes face à des stocks en baisse.",
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+    },
+    {
+      "date": "2026-09-15",
+      "market": "Énergie / Sanctions",
+      "countries": [
+        "usa",
+        "russia",
+        "iran"
+      ],
+      "resources": [
+        "oil",
+        "gas_lng"
+      ],
+      "headline": "La Chambre des représentants ouvre la voie à un vote sur les sanctions Russie-Iran",
+      "summary": "Le texte, en voie d'examen final, autoriserait la Maison-Blanche à imposer des droits de douane allant jusqu'à 100% aux principaux acheteurs d'énergie russe — ce qui viserait au premier chef la Chine, l'Inde et la Turquie, destinations de l'essentiel des exportations maritimes russes depuis 2022.",
+      "source": "OilPrice.com",
+      "url": "https://oilprice.com/"
+    },
+    {
+      "date": "2026-09-15",
+      "market": "Métaux industriels",
+      "countries": [
+        "usa",
+        "chile",
+        "china"
+      ],
+      "resources": [
+        "copper"
+      ],
+      "headline": "Le cuivre retombe à 6,39 $/lb après le report des droits de douane américains sur le métal raffiné",
+      "summary": "Le cuivre reste proche de plus bas de sept semaines, en baisse de 3,25% sur un mois mais toujours +37,8% sur un an. Les entrepôts LME ont enregistré leurs plus fortes entrées en près de quatre semaines, faisant repasser la courbe en contango. Le contrat avait atteint un record la semaine précédente, les cargaisons étant détournées vers les entrepôts américains en anticipation de droits de douane, avant de chuter de près de 5% quand Washington a repoussé sa décision.",
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/copper"
+    },
+    {
+      "date": "2026-09-14",
+      "market": "Énergie",
+      "countries": [
+        "saudi_arabia"
+      ],
+      "resources": [
+        "oil"
+      ],
+      "headline": "Quatre à sept jours de stocks à Yanbu : jusqu'à 120 Mb d'exportations menacées",
+      "summary": "Selon Kpler, les stocks de brut à Yanbu s'élèvent à environ 15 millions de barils, soit environ quatre jours au rythme de soutirage habituel, les flux du pipeline étant attendus perturbés pendant près d'un mois. Rystad chiffre à 120 millions de barils les exportations qui seraient retirées du marché sur un mois d'arrêt et voit les stocks de Yanbu épuisés en cinq à sept jours. L'AIE relève que l'offre saoudienne est tombée à son plus bas niveau depuis plus de trente ans.",
+      "source": "CNN Business / Kpler / Rystad",
+      "url": "https://www.cnn.com/2026/09/14/economy/saudi-east-west-pipeline-shut-oil-market"
+    },
+    {
+      "date": "2026-09-14",
+      "market": "Transport maritime",
+      "countries": [
+        "egypt",
+        "china"
+      ],
+      "resources": [
+        "container",
+        "oil"
+      ],
+      "headline": "Les Houthis s'emparent d'un port et de l'île de Mayun, à l'entrée de Bab-el-Mandeb",
+      "summary": "La prise de positions côtières et de l'île de Mayun (Perim) consolide le contrôle houthi sur l'approche sud de la mer Rouge, au moment même où les armateurs y reviennent. La capacité conteneurisée transitant par le détroit a doublé sur un an pour atteindre près de 213 000 EVP par semaine en août, mais ne représente encore que 23% des niveaux d'août 2023 selon Xeneta. Cinq services Cosco et OOCL ont repris les transits par Suez cette semaine.",
+      "source": "FreightWaves / Xeneta / Sourcing Journal",
+      "url": "https://www.freightwaves.com/news/houthi-gains-deepen-risk-as-carriers-restore-red-sea-services"
+    },
+    {
+      "date": "2026-09-14",
+      "market": "Agriculture",
+      "countries": [
+        "russia",
+        "ukraine",
+        "turkey",
+        "egypt"
+      ],
+      "resources": [
+        "wheat"
+      ],
+      "headline": "Blé autour de 7,10-7,30 $/boisseau : les exports maritimes russes s'effondrent de 62% en août",
+      "summary": "Les exportations maritimes de céréales russes sont tombées à 2 millions de tonnes en août, en baisse de 61,9% sur un an, et les expéditions via les ports d'Azov et de mer Noire ont chuté de 73,1%. L'USDA a abaissé ses prévisions d'exportation 2026/27 de 3 Mt pour la Russie, à 43 Mt, et de 1 Mt pour l'Ukraine, à 12,5 Mt. Le prix reste toutefois sous le pic de 7,67 $ du 28 août, les perspectives d'un accord négocié par la Turquie sur la sécurité des navires pesant sur le marché.",
+      "source": "Trading Economics / USDA",
+      "url": "https://tradingeconomics.com/commodity/wheat"
+    },
+    {
+      "date": "2026-09-13",
+      "market": "Énergie",
+      "countries": [
+        "iran",
+        "saudi_arabia",
+        "qatar"
+      ],
+      "resources": [
+        "oil",
+        "gas_lng",
+        "container"
+      ],
+      "headline": "Ormuz : 8 transits le 13 septembre contre une référence de 85 par jour",
+      "summary": "Le comptage IMF PortWatch place le trafic à environ 9% de la normale, le détroit restant de fait fermé au commerce de routine. Sur le plan diplomatique, l'Iran et Oman sont parvenus à un plan de réouverture et la Chine a plaidé pour la réouverture lors d'échanges directs avec le ministre iranien des Affaires étrangères. Les chargeurs japonais anticipent de leur côté une interruption prolongée affectant les chaînes d'approvisionnement GNL.",
+      "source": "IMF PortWatch",
+      "url": "https://portwatch.imf.org/pages/cc317ba850e34c4dadbead6f7b336fb1"
+    },
+    {
+      "date": "2026-09-11",
+      "market": "Énergie",
+      "countries": [
+        "saudi_arabia",
+        "iraq",
+        "iran"
+      ],
+      "resources": [
+        "oil"
+      ],
+      "headline": "L'Arabie Saoudite ferme le pipeline Est-Ouest après des frappes de drones lancées depuis l'Irak",
+      "summary": "Le ministère saoudien de l'Énergie a annoncé la fermeture préventive du pipeline de 1 200 km reliant les champs de l'Est au port de Yanbu, en mer Rouge, après des attaques survenues le 10 septembre dans les régions de Riyad et de Médine ; des stations de pompage ont été touchées. L'infrastructure acheminait 4 à 5 millions de bpd détournés d'Ormuz, soit le principal contournement du détroit. Le Brent est monté jusqu'à environ 110 $ avant de refluer vers 105 $, première clôture au-dessus de 100 $ depuis mai.",
+      "source": "Al Jazeera / FDD",
+      "url": "https://www.aljazeera.com/news/2026/9/14/why-saudi-arabias-east-west-pipeline-matters-for-global-oil"
+    },
+    {
+      "date": "2026-09-10",
+      "market": "Métaux industriels / Batteries",
+      "countries": [
+        "indonesia",
+        "china"
+      ],
+      "resources": [
+        "nickel",
+        "lithium"
+      ],
+      "headline": "Nickel : le resserrement des quotas RKAB indonésiens brouille le signal des stocks LME",
+      "summary": "Avec la poursuite du durcissement des quotas, le marché doit désormais suivre non seulement le chiffre national RKAB mais aussi les approbations mensuelles, la production par mine et les taux d'utilisation des fonderies. La croissance indonésienne s'est concentrée sur les produits de classe 2 et les intermédiaires — NPI, ferronickel, matte, MHP — non livrables au LME, ce qui affaiblit la lecture traditionnelle du marché par les stocks d'échange.",
+      "source": "Skillings",
+      "url": "https://www.skillings.net/nickel-market-outlook-2026-indonesia-ore-quotas-tighten-as-el-nino-risks-mount/"
+    },
+    {
+      "date": "2026-09-09",
+      "market": "Énergie",
+      "countries": [
+        "saudi_arabia",
+        "iran",
+        "usa"
+      ],
+      "resources": [
+        "oil"
+      ],
+      "headline": "EIA : la production mise à l'arrêt atteint 6,7 M bpd en août, le Brent à 91 $ en moyenne",
+      "summary": "Le STEO de septembre relève la moyenne mensuelle du Brent à 91 $/b en août, soit 7 $ de plus qu'en juillet, les exportations du Moyen-Orient restant contraintes. Les arrêts de production forcés sont passés de 5,0 à 6,7 millions de bpd entre juillet et août, sous l'effet de flux limités et variables à Ormuz et Bab-el-Mandeb. L'agence table désormais sur environ 90 $/b au second semestre 2026, contre 82 $ le mois précédent, puis un reflux vers 77 $ au T2 2027.",
+      "source": "EIA — Short-Term Energy Outlook",
+      "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+    },
+    {
+      "date": "2026-09-01",
+      "market": "Agriculture",
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
+      "headline": "Deux mois d'attaques croisées en mer Noire portent le blé à un plus haut de trois ans",
+      "summary": "Les frappes réciproques sur les navires marchands et les ports de la mer Noire et de la mer d'Azov ont entamé les exportations des deux pays, qui représentent ensemble plus d'un quart des exportations mondiales de blé et des volumes importants d'orge, de maïs et d'huile de tournesol. La configuration rappelle 2022, quand la suspension des chargements ukrainiens avait poussé les prix des céréales à des records.",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-01/what-russia-ukraine-black-sea-attacks-mean-for-food-prices"
+    },
+    {
+      "date": "2026-08-31",
+      "market": "Transport maritime",
+      "countries": [
+        "saudi_arabia",
+        "egypt"
+      ],
+      "resources": [
+        "oil",
+        "container"
+      ],
+      "headline": "Inversion des chokepoints : Bab-el-Mandeb à 8,1 M bpd, Ormuz tombé à 4,9 M bpd",
+      "summary": "Selon le STEO d'août, le brut et les liquides transitant par Bab-el-Mandeb sont passés de 5,4 millions de bpd au T4 2025 à 8,1 millions au T2 2026, une hausse directement attribuée au détournement du brut saoudien, tandis qu'Ormuz s'effondrait de 21,6 à 4,9 millions de bpd sur la même période. Les deux principaux points de passage de la région se retrouvent donc exposés simultanément, le canal de Suez et le pipeline SUMED restant des alternatives plus lentes, plus chères et de capacité limitée.",
+      "source": "EIA / Logistics Middle East",
+      "url": "https://www.logisticsmiddleeast.com/analysis/bab-al-mandab-under-houthi-control-what-it-means-for-shipping"
+    },
+    {
+      "date": "2026-08-28",
+      "market": "Agriculture",
+      "countries": [
+        "ukraine",
+        "russia",
+        "egypt"
+      ],
+      "resources": [
+        "wheat"
+      ],
+      "headline": "Le blé touche 7,67 $/boisseau, plus haut de trois ans et demi",
+      "summary": "SovEcon décrit une activité proche de zéro sur les trois terminaux d'Odesa, qui ont assuré plus de 90% des exportations ukrainiennes de blé au premier semestre, et l'arrêt de tous les terminaux russes d'Azov et de mer Noire sauf un, habituellement responsables de plus de 80% des expéditions russes. Les contrats à terme ont progressé d'environ 35% depuis janvier, dont 20% sur les deux derniers mois ; la Russie et l'Ukraine fournissaient 44% du blé importé par l'Afrique en 2024.",
+      "source": "African Business / SovEcon",
+      "url": "https://african.business/2026/08/resources/wheat-prices-spike-as-ukraine-and-russia-trade-black-sea-blows"
+    },
+    {
+      "date": "2026-08-10",
+      "market": "Engrais / Agriculture",
+      "countries": [
+        "usa",
+        "morocco",
+        "russia"
+      ],
+      "resources": [
+        "fertilizers"
+      ],
+      "headline": "Engrais et carburants américains toujours en hausse avant les semis d'automne",
+      "summary": "Au 7 août, le DAP atteignait 912 $/tonne dans l'Illinois, en hausse de 7% sur un an et de 24% par rapport à août 2024, la potasse évoluant entre 490 et 505 $/tonne. Le gazole agricole est remonté à 4,65 $/gallon après un pic proche de 5,50 $ début mai, soit plus de 50% au-dessus des niveaux de 2024 et 2025. La Banque mondiale anticipe une hausse de plus de 30% de son indice des engrais sur 2026, tirée par l'azote et les phosphates.",
+      "source": "farmdoc daily (University of Illinois)",
+      "url": "https://farmdocdaily.illinois.edu/2026/08/fertilizer-and-fuel-prices-higher-heading-into-fall-2026.html"
+    },
+    {
       "date": "2026-08-06",
       "market": "Métaux industriels / Batteries",
-      "countries": ["indonesia"],
-      "resources": ["nickel"],
+      "countries": [
+        "indonesia"
+      ],
+      "resources": [
+        "nickel"
+      ],
       "headline": "Le nickel se stabilise autour de 17 100$/tonne, toujours porté par les restrictions de quotas indonésiennes",
       "summary": "Le nickel s'échangeait à 17 116$/tonne le 6 août, quasi stable sur la journée mais en hausse de plus de 5% sur juillet et de 13% sur un an, restant proche de son plus haut niveau en plus d'un mois. Les inquiétudes sur l'offre indonésienne, après la réduction confirmée du quota RKAB 2026, continuent de soutenir les prix malgré le passage du marché mondial en déficit selon l'INSG.",
       "source": "Trading Economics / INSG",
@@ -1640,8 +2326,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-05",
       "market": "Métaux industriels",
-      "countries": ["chile"],
-      "resources": ["copper"],
+      "countries": [
+        "chile"
+      ],
+      "resources": [
+        "copper"
+      ],
       "headline": "Le cuivre s'approche de records historiques à 6,73$/lb, en hausse de 53% sur un an",
       "summary": "Le cuivre a grimpé à 6,73$/lb le 5 août, en hausse de 1,65% sur la journée et de 8,9% sur le mois, portant sa progression à plus de 53% sur un an. Les contrats à terme sont passés au-dessus de 6,60$/lb, se rapprochant de nouveaux records, sous l'effet du resserrement de l'offre mondiale alors que la production chilienne continue de reculer.",
       "source": "Trading Economics",
@@ -1650,8 +2340,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-05",
       "market": "Semi-conducteurs / Tech",
-      "countries": ["taiwan", "usa"],
-      "resources": ["semiconductors"],
+      "countries": [
+        "taiwan",
+        "usa"
+      ],
+      "resources": [
+        "semiconductors"
+      ],
       "headline": "TSMC vise 180 000 plaquettes 3nm par mois dès le T4, en avance sur son calendrier, malgré un titre en repli",
       "summary": "TSMC a publié un chiffre d'affaires trimestriel record de 40,2 milliards $ au T2 2026 et relevé son objectif d'investissement annuel à 60-64 milliards $, dont 70 à 80% dédiés aux technologies de pointe (3nm et 2nm), avec trois nouvelles usines 3nm à Taïwan, en Arizona et à Kumamoto. Wedbush estime que TSMC pourrait atteindre 180 000 démarrages de plaquettes 3nm par mois dès le début du T4, soit deux à trois mois plus tôt que prévu, porté par la demande de puces IA. Le titre a toutefois reculé le 5 août, les investisseurs digérant un ensemble de résultats technologiques mitigés.",
       "source": "Benzinga / Yahoo Finance",
@@ -1660,8 +2355,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-05",
       "market": "Engrais / Agriculture",
-      "countries": ["saudi_arabia", "morocco"],
-      "resources": ["fertilizers"],
+      "countries": [
+        "saudi_arabia",
+        "morocco"
+      ],
+      "resources": [
+        "fertilizers"
+      ],
       "headline": "Le DAP golfe approche 800$/tonne, la guerre au Moyen-Orient menace les exports de phosphate saoudien",
       "summary": "Le prix du diammonium phosphate (DAP) golfe est passé d'environ 583$/tonne début 2025 à près de 800$/tonne en août 2026, porté par le phosphate en tête de la hausse, une potasse tendue par les risques de politique commerciale, et un coût de production de l'ammoniac/urée relevé par la hausse du gaz naturel. Le conflit au Moyen-Orient a perturbé les expéditions de phosphate depuis l'Arabie Saoudite, troisième fournisseur mondial, faisant craindre une nouvelle hausse des prix du phosphate et de la potasse.",
       "source": "Farm Bureau / World Bank Blogs",
@@ -1670,8 +2370,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-05",
       "market": "Transport maritime",
-      "countries": ["china", "usa"],
-      "resources": ["container"],
+      "countries": [
+        "china",
+        "usa"
+      ],
+      "resources": [
+        "container"
+      ],
       "headline": "MSC annonce de nouveaux tarifs Asie-Europe pour le 15 août, les taux Chine-USA repartent au-dessus de 7 200$",
       "summary": "L'indice mondial de fret conteneurisé était stable à 3 206 points le 5 août (+106,7% sur un an) malgré un recul de 3,6% sur le mois. MSC a annoncé de nouveaux tarifs FAK pour les liaisons Extrême-Orient/Europe du Nord, Méditerranée et mer Noire applicables dès le 15 août, incluant une surtaxe carburant globale de 271$/EVP pour août. Les tarifs Chine-côte ouest américaine ont bondi à environ 7 200-7 300$/conteneur après la hausse tarifaire d'août, même si les transporteurs continuent d'offrir des rabais via des programmes de tarifs spéciaux.",
       "source": "Container News / FreightRight",
@@ -1680,8 +2385,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-04",
       "market": "Énergie",
-      "countries": ["saudi_arabia", "iran", "usa"],
-      "resources": ["oil"],
+      "countries": [
+        "saudi_arabia",
+        "iran",
+        "usa"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Le trafic à Ormuz reste proche de l'arrêt malgré des pourparlers Iran-Oman, un pétrolier saoudien touché par un missile de croisière",
       "summary": "Le tanker saoudien NCC Masa a été touché par un missile de croisière lors de son transit dans le détroit d'Ormuz, plusieurs membres d'équipage ayant été évacués pour soins. Kpler recense moins de dix navires transitant quotidiennement par le détroit, contre plus d'une centaine avant la guerre. Téhéran a averti qu'aucun navire ne serait autorisé à emprunter une autre route que celle fixée par l'Iran, menaçant de cibler les navires de guerre américains empruntant d'autres itinéraires, tandis que des pourparlers Iran-Oman se poursuivent avec un optimisme affiché par Washington sur un possible accord.",
       "source": "CNN / Kpler",
@@ -1690,8 +2401,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-04",
       "market": "Agriculture",
-      "countries": ["russia", "ukraine"],
-      "resources": ["wheat"],
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
       "headline": "Les achats de blé aux ports ukrainiens de la mer Noire quasiment à l'arrêt, le blé recule à 6,40$/boisseau",
       "summary": "Les prix d'achat à l'export de blé livré aux ports ukrainiens de la mer Noire ont pratiquement disparu la semaine dernière, les exportations maritimes de céréales restant suspendues. Le blé est retombé autour de 6,40$/boisseau, un plus bas de trois semaines, après l'annonce par la Russie de mesures pour renforcer la sécurité de la navigation dans le bassin Azov-mer Noire suite à l'escalade des attaques maritimes. Le ministre ukrainien de l'Agriculture prévient que les routes d'export alternatives resteront limitées à environ la moitié des volumes habituels au moins jusqu'à fin août ; SovEcon a abaissé de 4% sa prévision d'exportations russes de blé pour la saison en cours.",
       "source": "UkrAgroConsult / SovEcon",
@@ -1700,8 +2416,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-04",
       "market": "Métaux industriels / Batteries",
-      "countries": ["chile", "china"],
-      "resources": ["lithium"],
+      "countries": [
+        "chile",
+        "china"
+      ],
+      "resources": [
+        "lithium"
+      ],
       "headline": "Le lithium se stabilise, les fabricants chinois et coréens maintiennent leurs commandes à terme",
       "summary": "L'ETF Global X Lithium (LIT) a progressé de 0,27% à 69,41$ le 3 août, Albemarle gagnant 0,91% pendant que la chilienne SQM reculait légèrement de 0,04%. Les fabricants de cellules chinois et coréens continuent de passer des commandes à terme d'hydroxyde de lithium, alors qu'aucune technologie de batterie concurrente n'a atteint une échelle suffisante pour entamer le rôle central du lithium dans la production de véhicules électriques. Fastmarkets maintient ses prix élevés attendus jusqu'en 2027, jugeant nécessaires plusieurs années de prix soutenus pour financer la prochaine vague de projets miniers.",
       "source": "Rio Times / Fastmarkets",
@@ -1710,8 +2431,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-02",
       "market": "Énergie",
-      "countries": ["usa"],
-      "resources": ["gas_lng"],
+      "countries": [
+        "usa"
+      ],
+      "resources": [
+        "gas_lng"
+      ],
       "headline": "Le canal de Panama lance un pipeline GPL pour libérer des créneaux au trafic GNL, les exports américains visés à plus de 30 Bcf/j d'ici la fin de la décennie",
       "summary": "L'Autorité du canal de Panama a lancé le processus de sélection pour son projet de pipeline de gaz de pétrole liquéfié (GPL) de 2,5 millions de barils/jour, courant parallèlement au canal, dans le but de réduire les temps d'attente des navires et libérer des créneaux d'écluses pour les méthaniers en provenance du Golfe des États-Unis vers l'Asie. Les exportations américaines de GNL doivent passer d'environ 16 milliards de pieds cubes/jour actuellement à plus de 30 d'ici la fin de la décennie, rendant l'accès au canal de plus en plus stratégique malgré les restrictions de tirant d'eau déjà en vigueur.",
       "source": "NGI (Natural Gas Intelligence) / S&P Global",
@@ -1720,8 +2445,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-01",
       "market": "Énergie",
-      "countries": ["qatar", "iran", "usa", "egypt"],
-      "resources": ["oil", "gas_lng"],
+      "countries": [
+        "qatar",
+        "iran",
+        "usa",
+        "egypt"
+      ],
+      "resources": [
+        "oil",
+        "gas_lng"
+      ],
       "headline": "Un méthanier qatari de nouveau touché à Ormuz, Trump aurait ordonné une frappe sur l'Iran dès ce week-end",
       "summary": "Le Gaslog Shanghai, transportant une cargaison de GNL qatari, a été touché par un projectile en transitant par le détroit d'Ormuz au large d'Oman le 1er août, sans impact environnemental signalé selon l'UKMTO. Un autre méthanier du même armateur, le Gaslog Salem, avait été frappé par un drone dans le port égyptien de Damiette trois jours plus tôt. Selon le Wall Street Journal cité par Bloomberg, Donald Trump aurait ordonné une nouvelle frappe américaine contre l'Iran dès ce week-end.",
       "source": "Bloomberg / WSJ / UKMTO",
@@ -1730,8 +2463,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-31",
       "market": "Agriculture",
-      "countries": ["russia", "ukraine"],
-      "resources": ["wheat"],
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
       "headline": "L'Ukraine détruit le terminal céréalier russe de Taman, la Russie évoque un manque possible de 30 à 35 millions de tonnes de blé",
       "summary": "Des drones ukrainiens ont frappé les 29-30 juillet le complexe portuaire de Taman (Demetra-Holding), terminal en eau profonde de 5,5 millions de tonnes de capacité annuelle, ainsi que le terminal d'huile végétale d'EFKO, seule installation équivalente en Russie. L'Union russe des exportateurs de céréales a averti Reuters qu'un blocage complet des corridors d'exportation en mer Noire est désormais possible, avec un manque saisonnier estimé à 30-35 millions de tonnes (environ 15% du commerce mondial de blé) qu'aucun exportateur alternatif ne pourrait combler. Le blé CBOT se maintient autour de 6,80$/boisseau après avoir atteint 7$/boisseau le 22 juillet, un plus haut de deux ans.",
       "source": "Tech Times / Reuters",
@@ -1740,8 +2478,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-31",
       "market": "Métaux industriels",
-      "countries": ["chile"],
-      "resources": ["copper"],
+      "countries": [
+        "chile"
+      ],
+      "resources": [
+        "copper"
+      ],
       "headline": "Le cuivre chilien conjugue prix record et production en baisse, 13 projets à 14,8 milliards $ doivent avancer en 2026",
       "summary": "Le cuivre s'échangeait à 6,44$/lb fin juillet, en hausse de 45,7% sur un an, alors que la production chilienne recule de 7% sur un an et devrait tomber à 5,3 millions de tonnes en 2026. Treize projets cuivre chiliens représentant 14,8 milliards $ doivent franchir des jalons clés cette année, dont sept nouvelles mises en production ajoutant près de 500 000 tonnes de capacité annuelle. Des tempêtes persistantes dans les Andes continuent de perturber l'activité minière début août.",
       "source": "Mining.com / Rio Times",
@@ -1750,8 +2492,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-31",
       "market": "Métaux industriels / Batteries",
-      "countries": ["indonesia"],
-      "resources": ["nickel"],
+      "countries": [
+        "indonesia"
+      ],
+      "resources": [
+        "nickel"
+      ],
       "headline": "L'Indonésie confirme une baisse d'environ 30% de son quota de minerai de nickel pour 2026",
       "summary": "Le ministère indonésien de l'Énergie a fixé le quota RKAB 2026 à 260-270 millions de tonnes humides, contre 379 millions de tonnes approuvées en 2025, refusant toute augmentation large malgré la date limite de révision du 31 juillet. Seules des exceptions ponctuelles seront accordées aux fonderies domestiques en déficit immédiat de matière première, une stratégie assumée pour soutenir les prix mondiaux face au risque de surproduction.",
       "source": "Argus Media / Benchmark Mineral Intelligence",
@@ -1760,8 +2506,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-30",
       "market": "Métaux industriels / Batteries",
-      "countries": ["china"],
-      "resources": ["lithium"],
+      "countries": [
+        "china"
+      ],
+      "resources": [
+        "lithium"
+      ],
       "headline": "Fastmarkets relève fortement sa prévision de prix du lithium pour 2026 après l'arrêt de la mine CATL de Jianxiawo",
       "summary": "Fastmarkets a relevé sa prévision de prix du carbonate de lithium 2026 à 23,80$/kg contre 17,40$/kg précédemment, porté par une demande de stockage d'énergie (ESS) attendue en hausse de 55% en 2026 et par la suspension de la mine chinoise Jianxiawo de CATL ainsi que des restrictions d'export au Zimbabwe. Les prix restaient toutefois stables autour de 25,21$/kg mi-juillet, le marché digérant encore ces chocs d'offre.",
       "source": "Fastmarkets / Mining.com",
@@ -1770,8 +2520,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-01",
       "market": "Semi-conducteurs / Tech",
-      "countries": ["south_korea", "china", "usa"],
-      "resources": ["semiconductors"],
+      "countries": [
+        "south_korea",
+        "china",
+        "usa"
+      ],
+      "resources": [
+        "semiconductors"
+      ],
       "headline": "Les exportations sud-coréennes de semi-conducteurs franchissent 41 milliards $ en juillet, un record inédit pour un deuxième mois consécutif",
       "summary": "Les exportations sud-coréennes de puces ont atteint 41,01 milliards $ en juillet (+179% sur un an), deuxième mois consécutif au-dessus de 40 milliards $, un seuil qu'aucune économie exportatrice n'avait jamais franchi sur une seule catégorie de produits. SK Hynix détient environ 54% du marché mondial de la HBM et 70% des commandes HBM4 de Nvidia pour la plateforme Vera Rubin ; sa production 2026 de HBM, DRAM et NAND est entièrement vendue. Samsung a publié un profit trimestriel record de 89,2 billions de wons (~61,8 milliards $) dans sa division semi-conducteurs, tandis que la pénurie de DRAM classique (prix DDR4 multiplié par 8 sur un an, ~21$/unité) devrait persister jusqu'en 2028.",
       "source": "Tech Times / Ministère sud-coréen du Commerce, de l'Industrie et de l'Énergie",
@@ -1780,8 +2536,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-28",
       "market": "Engrais / Agriculture",
-      "countries": ["morocco", "belarus"],
-      "resources": ["fertilizers"],
+      "countries": [
+        "morocco",
+        "belarus"
+      ],
+      "resources": [
+        "fertilizers"
+      ],
       "headline": "La potasse bondit de 17% sur un an, le marocain OCP accélère la maintenance de ses usines de phosphate",
       "summary": "Les prix de la potasse (MOP) ont progressé de plus de 5% au premier trimestre 2026 et sont désormais environ 17% plus élevés qu'il y a un an, avec un objectif de 280$/tonne FOB Vancouver en 2026 contre 260$ actuellement. Au Maroc, l'OCP a accéléré la maintenance de ses installations phosphatières en réaction aux perturbations des marchés du soufre et de l'ammoniac, alors que le phosphate roche reste stable autour de 150$/tonne FOB Maroc.",
       "source": "World Bank Blogs / Fitch",
@@ -1790,8 +2551,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-08-01",
       "market": "Transport maritime",
-      "countries": ["egypt", "usa"],
-      "resources": ["container"],
+      "countries": [
+        "egypt",
+        "usa"
+      ],
+      "resources": [
+        "container"
+      ],
       "headline": "Les armateurs imposent des surtaxes carburant d'urgence pour août face aux tensions au Moyen-Orient, malgré un indice Drewry en léger repli",
       "summary": "L'indice mondial Drewry a reculé de 4% à 4 374$/EVP la semaine du 23 juillet, mais plusieurs armateurs ont annoncé des surtaxes carburant d'urgence de 65 à 165$/conteneur pour août suite au regain de tensions au Moyen-Orient et à la hausse du coût du soutage. Les détournements par le cap de Bonne-Espérance restent la norme pour éviter la mer Rouge, allongeant les délais de 8 à 12 jours et renchérissant les taux de 15 à 25% sur les importations vers la côte est américaine, une situation jugée appelée à durer au moins jusqu'en 2027.",
       "source": "UNCTAD / Suaid Global / iContainers",
@@ -1800,8 +2566,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-26",
       "market": "Énergie",
-      "countries": ["iran", "usa", "saudi_arabia"],
-      "resources": ["oil", "gas_lng"],
+      "countries": [
+        "iran",
+        "usa",
+        "saudi_arabia"
+      ],
+      "resources": [
+        "oil",
+        "gas_lng"
+      ],
       "headline": "Le blocus naval américain contre l'Iran se poursuit, une pause dans les frappes ouvre une fenêtre diplomatique sur Ormuz",
       "summary": "Après près de deux semaines de frappes américaines nocturnes en représailles aux tirs iraniens sur des navires transitant par le détroit d'Ormuz, Washington et Téhéran ont suspendu leurs attaques pour un second jour consécutif le 26 juillet. Le blocus naval américain réimposé reste actif : une douzaine de navires commerciaux redirigés, deux immobilisés et deux arraisonnés le week-end précédent. Les Houthis ont par ailleurs menacé de bloquer la navigation saoudienne à Bab-el-Mandeb, ouvrant un second front sur les chokepoints de la région.",
       "source": "NPR / GPB / Al Jazeera",
@@ -1810,8 +2583,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-20",
       "market": "Agriculture",
-      "countries": ["russia", "ukraine"],
-      "resources": ["wheat"],
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
       "headline": "Le blé grimpe à un plus haut de deux ans après une nouvelle vague de frappes russo-ukrainiennes en mer Noire",
       "summary": "Le blé de Chicago a atteint 6,87-6,90$/boisseau, son plus haut niveau depuis juin 2024, après que l'Ukraine a frappé des navires russes en mer Noire suite à plus de 100 attaques similaires en mer d'Azov, tandis que la Russie intensifiait ses frappes sur les infrastructures portuaires ukrainiennes. Le blé meunier de Paris (Euronext) a bondi de 7% à 231,75€/tonne, son plus haut niveau depuis février 2025.",
       "source": "Bloomberg / U.S. News",
@@ -1820,8 +2598,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-22",
       "market": "Métaux industriels",
-      "countries": ["chile"],
-      "resources": ["copper"],
+      "countries": [
+        "chile"
+      ],
+      "resources": [
+        "copper"
+      ],
       "headline": "Le cuivre bascule vers un déficit mondial de 150 000 tonnes en 2026, l'ICSG abandonne son scénario d'excédent",
       "summary": "L'International Copper Study Group a révisé sa prévision 2026 d'un excédent de 209 000 tonnes vers un déficit de 150 000 tonnes, sous l'effet de retards et d'accidents miniers au Chili et au Pérou, qui fournissent à eux deux environ 40% du cuivre miné mondial. Le cuivre s'échange autour de 6,29$/lb dans la semaine du 20 juillet.",
       "source": "The Oregon Group / ICSG",
@@ -1830,8 +2612,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-14",
       "market": "Métaux industriels / Batteries",
-      "countries": ["indonesia"],
-      "resources": ["nickel"],
+      "countries": [
+        "indonesia"
+      ],
+      "resources": [
+        "nickel"
+      ],
       "headline": "Le nickel bascule en déficit mondial pour la première fois depuis 2021, selon l'INSG",
       "summary": "L'International Nickel Study Group a révisé son bilan mondial 2026 d'un excédent prévu de 283 000 tonnes vers un déficit de 32 000 tonnes, une première depuis 2021, après le refus de l'Indonésie le 10 juillet d'augmenter largement son quota national de minerai de nickel (plafonné à 260-270 millions de tonnes humides, contre un besoin estimé à 345 millions par les fondeurs). La décision finale sur les quotas supplémentaires est attendue le 31 juillet.",
       "source": "Crux Investor / International Nickel Study Group",
@@ -1840,8 +2626,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-21",
       "market": "Semi-conducteurs / Tech",
-      "countries": ["china", "taiwan"],
-      "resources": ["semiconductors"],
+      "countries": [
+        "china",
+        "taiwan"
+      ],
+      "resources": [
+        "semiconductors"
+      ],
       "headline": "Pékin envisage d'interdire à TSMC de fabriquer des puces conçues par Huawei, Alibaba et ByteDance",
       "summary": "Le ministère chinois du Commerce étudie des contrôles à l'export qui empêcheraient TSMC et Qualcomm de produire des puces basées sur des designs de géants technologiques chinois (Huawei, Alibaba, ByteDance), une riposte potentielle aux restrictions américaines. La mesure intervient alors que TSMC vient de relever ses objectifs d'investissement 2026 à 60-64 milliards $, porté par la demande IA.",
       "source": "Yahoo Finance / Bloomberg",
@@ -1850,8 +2641,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-01",
       "market": "Engrais / Agriculture",
-      "countries": ["russia", "belarus"],
-      "resources": ["fertilizers"],
+      "countries": [
+        "russia",
+        "belarus"
+      ],
+      "resources": [
+        "fertilizers"
+      ],
       "headline": "L'UE relève ses surtaxes sur les engrais russes et biélorusses, accélérant la redirection des flux vers le Brésil et l'Inde",
       "summary": "Depuis le 1er juillet, l'UE a relevé sa surtaxe sur les engrais azotés russes et biélorusses (urée, ammonitrate, UAN) à 60€/tonne et sur les phosphatés (DAP, MAP, NPK) à 45€/tonne, en plus des droits de douane existants (6,5%). Ces surtaxes doivent grimper jusqu'à 315€/t et 430€/t d'ici 2028, accentuant la réorientation déjà engagée des volumes russes vers le Brésil, l'Inde et potentiellement les États-Unis.",
       "source": "New Ag International / GPCA",
@@ -1860,8 +2656,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-22",
       "market": "Énergie",
-      "countries": ["saudi_arabia", "egypt", "iran"],
-      "resources": ["oil"],
+      "countries": [
+        "saudi_arabia",
+        "egypt",
+        "iran"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Les Houthis déclarent un blocus de Bab-el-Mandeb, le trafic à Ormuz chute de 90% sur un an",
       "summary": "Le trafic maritime non lié à l'Iran dans le détroit d'Ormuz est tombé à 25 navires contre 108 la semaine précédente (13-19 juillet), soit une baisse d'environ 90% sur un an. Les Houthis ont proclamé un blocus de Bab-el-Mandeb et menacé l'Arabie Saoudite ; au moins 4 pétroliers à destination de l'Inde et de la Chine ont fait demi-tour pour emprunter la route plus longue via le canal de Suez.",
       "source": "Lloyd's List Intelligence / CNN / Al Jazeera",
@@ -1870,8 +2672,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-15",
       "market": "Transport maritime",
-      "countries": ["egypt", "usa"],
-      "resources": ["container"],
+      "countries": [
+        "egypt",
+        "usa"
+      ],
+      "resources": [
+        "container"
+      ],
       "headline": "Nouvelles surtaxes à Suez et restrictions à Panama : les taux de fret conteneurs au plus haut depuis 22 mois",
       "summary": "L'indice Drewry atteint 4 639 $/EVP, un record depuis 22 mois, alors que le canal de Suez applique de nouvelles surtaxes depuis le 15 juillet et que le tirant d'eau maximal des navires Neopanamax à Panama est réduit à 49,5 pieds depuis le 1er juillet. Les taux Asie-Europe sont désormais 25 à 40% plus élevés qu'en l'absence de crise.",
       "source": "Drewry / Kisun Shipping / IndexBox",
@@ -1880,8 +2687,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-22",
       "market": "Énergie",
-      "countries": ["usa"],
-      "resources": ["gas_lng"],
+      "countries": [
+        "usa"
+      ],
+      "resources": [
+        "gas_lng"
+      ],
       "headline": "Le canal de Panama suspend une partie de son système de réservation, nouveau frein pour le trafic GNL",
       "summary": "L'Autorité du canal de Panama va suspendre les enchères quotidiennes pour les écluses Panamax à partir du 25 juillet, invoquant la baisse du niveau du lac Gatun et un risque de retour d'El Niño. Ce nouveau resserrement s'ajoute à la réduction du tirant d'eau déjà en vigueur et pèse sur les méthaniers reliant le Golfe des États-Unis à l'Asie.",
       "source": "Panama Canal Authority / HotAir",
@@ -1890,8 +2701,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-15",
       "market": "Agriculture",
-      "countries": ["russia", "ukraine"],
-      "resources": ["wheat"],
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
       "headline": "Le blé bondit à 6,70$/boisseau après la perte d'un tiers des capacités d'export ukrainiennes",
       "summary": "Les frappes russes intensifiées ont fait perdre à l'Ukraine environ un tiers de sa capacité d'exportation céréalière via les ports de la mer Noire, tandis que l'Ukraine a frappé plus de 100 navires liés à la Russie en mer d'Azov. La production russe de blé est projetée à 87 millions de tonnes pour 2026 (+7%), la Russie représentant 21% des exportations mondiales.",
       "source": "IndexBox / Ukragroconsult",
@@ -1900,8 +2716,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-20",
       "market": "Métaux industriels",
-      "countries": ["indonesia"],
-      "resources": ["nickel"],
+      "countries": [
+        "indonesia"
+      ],
+      "resources": [
+        "nickel"
+      ],
       "headline": "Le nickel se négocie sous son coût marginal de production, décision de quota indonésien attendue le 31 juillet",
       "summary": "Le nickel s'échange autour de 16 500-16 700 $/tonne début juillet, sous le coût cash C1 estimé par Bernstein (17 870-18 650 $/tonne pour les 75e-90e percentiles). L'Indonésie a ouvert une fenêtre de demande de quotas supplémentaires (1er-31 juillet) au-delà du plafond de 260-270 millions de tonnes humides ; la décision du 31 juillet est le prochain catalyseur du marché.",
       "source": "Discovery Alert / Crux Investor / Bernstein",
@@ -1910,8 +2730,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-21",
       "market": "Engrais / Agriculture",
-      "countries": ["morocco", "belarus"],
-      "resources": ["fertilizers", "oil"],
+      "countries": [
+        "morocco",
+        "belarus"
+      ],
+      "resources": [
+        "fertilizers",
+        "oil"
+      ],
       "headline": "L'indice mondial des engrais grimpe de 12% sous l'effet de la crise d'Ormuz, la potasse bélarusse continue de contourner les sanctions",
       "summary": "L'indice mondial des prix des engrais a progressé de 12% depuis le début de la crise du détroit d'Ormuz, le soufre, l'urée et le phosphate étant les plus touchés. Le Belarus a exporté 2,5 millions de tonnes de potasse au premier trimestre 2026 via des routes de contournement (ports russes, marché chinois) malgré le maintien des sanctions UE/US.",
       "source": "Briefs.co / Nutra / OSW",
@@ -1920,8 +2746,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-22",
       "market": "Métaux industriels",
-      "countries": ["chile"],
-      "resources": ["copper"],
+      "countries": [
+        "chile"
+      ],
+      "resources": [
+        "copper"
+      ],
       "headline": "Le Chili prépare 100 milliards $ d'investissements cuivre pour diversifier ses clients au-delà de la Chine",
       "summary": "Malgré une production stagnante, les revenus d'exportation de cuivre chilien ont atteint un record de 30,2 milliards $ au 1er semestre 2026 grâce à la hausse des prix (~5$/lb au pic). Santiago cherche à réduire sa dépendance à la Chine (plus de la moitié de ses exports) en visant la demande des data centers.",
       "source": "Bloomberg",
@@ -1931,7 +2761,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "date": "2026-07-20",
       "market": "Métaux industriels / Batteries",
       "countries": [],
-      "resources": ["lithium"],
+      "resources": [
+        "lithium"
+      ],
       "headline": "Le lithium tombe à son plus bas niveau depuis 5 mois sur des craintes de surproduction en 2027",
       "summary": "Les prix reculent (carbonate de lithium ~154 000 yuans/tonne en Chine) alors que des mines australiennes et chinoises redémarrent (Bald Hill, Finniss, Jianxiawo). Fastmarkets maintient toutefois un scénario de déficit de marché pour 2026 et relève ses prévisions de prix 2026-2027.",
       "source": "Mining.com / Fastmarkets",
@@ -1940,8 +2772,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-16",
       "market": "Semi-conducteurs / Tech",
-      "countries": ["taiwan"],
-      "resources": ["semiconductors"],
+      "countries": [
+        "taiwan"
+      ],
+      "resources": [
+        "semiconductors"
+      ],
       "headline": "TSMC relève ses prévisions 2026 : croissance de plus de 40% portée par la demande IA",
       "summary": "TSMC a dépassé les attentes au T2 2026 (chiffre d'affaires S1 2026 en hausse de 35,6% sur un an) et relève son objectif d'investissement à 60-64 milliards $. Les puces IA pourraient représenter ~25% de son chiffre d'affaires 2026, confirmant la concentration critique de la production de pointe à Taïwan.",
       "source": "Bloomberg / CNBC",
@@ -1951,7 +2787,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "date": "2026-07-09",
       "market": "Transport maritime",
       "countries": [],
-      "resources": ["container"],
+      "resources": [
+        "container"
+      ],
       "headline": "Les taux de fret conteneurs bondissent au plus haut depuis septembre 2024",
       "summary": "L'indice Drewry atteint 4 639 $/conteneur 40 pieds ; Shanghai-Los Angeles a grimpé à 6 482 $ (+253% vs fin février), tiré par les tensions géopolitiques persistantes sur les routes maritimes, la demande saisonnière forte et une pénurie de conteneurs 40 pieds en Chine/Asie du Sud-Est.",
       "source": "Drewry / IndexBox",
@@ -1960,8 +2798,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-20",
       "market": "Énergie",
-      "countries": ["saudi_arabia"],
-      "resources": ["oil"],
+      "countries": [
+        "saudi_arabia"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Les chargements de pétrole saoudien chutent de 36% suite à de nouvelles perturbations à Bab-el-Mandeb",
       "summary": "Les tensions en mer Rouge continuent de peser sur les exportations saoudiennes malgré l'existence du pipeline SUMED comme alternative partielle.",
       "source": "The National",
@@ -1970,8 +2812,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-07-11",
       "market": "Énergie",
-      "countries": ["saudi_arabia", "uae", "iran"],
-      "resources": ["oil"],
+      "countries": [
+        "saudi_arabia",
+        "uae",
+        "iran"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "De nouveaux pipelines de contournement du détroit d'Ormuz pourraient entrer en service dans 1 à 2 ans",
       "summary": "Kpler analyse les projets d'extension de capacité des pipelines Petroline (Arabie Saoudite) et Habshan-Fujairah (EAU) face au risque persistant sur Ormuz.",
       "source": "Kpler",
@@ -1981,7 +2829,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "date": "2026-06-03",
       "market": "Engrais / Agriculture",
       "countries": [],
-      "resources": ["fertilizers", "oil"],
+      "resources": [
+        "fertilizers",
+        "oil"
+      ],
       "headline": "Les prix des engrais sous tension : les perturbations du détroit d'Ormuz remontent jusqu'aux marchés agricoles",
       "summary": "La Banque mondiale documente comment une perturbation d'un chokepoint énergétique (Ormuz) se propage aux coûts de production des engrais (gaz naturel = intrant clé de l'azote), illustrant la connexion entre routes énergétiques et sécurité alimentaire.",
       "source": "World Bank Blogs",
@@ -1990,8 +2841,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-05-21",
       "market": "Métaux industriels",
-      "countries": ["indonesia"],
-      "resources": ["nickel"],
+      "countries": [
+        "indonesia"
+      ],
+      "resources": [
+        "nickel"
+      ],
       "headline": "L'Indonésie place ses exportations de nickel sous contrôle étatique via son fonds souverain Danantara",
       "summary": "Le président Prabowo Subianto a annoncé qu'une entité publique deviendrait l'exportateur unique de plusieurs matières premières (dont les ferroalliages de nickel) à partir de septembre 2026, renforçant la stratégie indonésienne de captation de valeur sur la chaîne du nickel. Le nickel LME a reculé de 1,4% (18 665 $/tonne) après l'annonce.",
       "source": "Investing.com",
@@ -2000,8 +2855,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-03-01",
       "market": "Engrais / Agriculture",
-      "countries": ["morocco", "belarus"],
-      "resources": ["fertilizers"],
+      "countries": [
+        "morocco",
+        "belarus"
+      ],
+      "resources": [
+        "fertilizers"
+      ],
       "headline": "Maroc : le secteur du phosphate tient bon malgré la pression sur les marchés mondiaux d'engrais",
       "summary": "Le Maroc (68% des réserves mondiales de phosphate) maintient une production stable avec des prix attendus autour de 150$/tonne FOB en 2026, pendant que le Belarus reste sous sanctions UE (export potasse toujours bloqué via le port lituanien de Klaipeda), forçant une redirection continue vers l'Asie et les Amériques.",
       "source": "Morocco World News / World Bank Blogs",
@@ -2010,8 +2870,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2026-03-10",
       "market": "Énergie",
-      "countries": ["saudi_arabia"],
-      "resources": ["oil"],
+      "countries": [
+        "saudi_arabia"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Le pipeline Est-Ouest saoudien atteint sa pleine capacité (7 millions bpd)",
       "summary": "Aramco confirme que le Petroline a atteint un niveau de capacité record, offrant une capacité de contournement accrue face au risque géopolitique sur Ormuz.",
       "source": "S&P Global",
@@ -2020,8 +2884,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2025-12-01",
       "market": "Énergie / Sanctions",
-      "countries": ["russia", "india", "china", "turkey"],
-      "resources": ["oil"],
+      "countries": [
+        "russia",
+        "india",
+        "china",
+        "turkey"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Les sanctions contre Rosneft et Lukoil entrent en vigueur : l'Inde, la Chine et la Turquie s'adaptent plutôt que de sortir du marché russe",
       "summary": "Kpler documente comment les principaux acheteurs de brut russe ajustent leurs circuits logistiques et financiers pour continuer à absorber les volumes sanctionnés.",
       "source": "Kpler",
@@ -2030,8 +2901,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2025-09-03",
       "market": "Énergie / Sanctions",
-      "countries": ["russia"],
-      "resources": ["oil"],
+      "countries": [
+        "russia"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "La flotte fantôme russe continue de s'étendre pour maintenir les flux pétroliers sanctionnés",
       "summary": "S&P Global fait le point sur la taille et les méthodes de la flotte de tankers hors normes occidentales utilisée par la Russie.",
       "source": "S&P Global",
@@ -2040,8 +2915,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2025-07-10",
       "market": "Transport maritime",
-      "countries": ["usa", "china"],
-      "resources": ["gas_lng", "container"],
+      "countries": [
+        "usa",
+        "china"
+      ],
+      "resources": [
+        "gas_lng",
+        "container"
+      ],
       "headline": "Le canal de Panama retrouve un niveau d'eau normal, mais le trafic GNL ne rebondit pas",
       "summary": "Malgré la fin de la sécheresse, les transits de méthaniers restent structurellement inférieurs aux niveaux d'avant-crise : les armateurs ont réalloué leurs routes durablement.",
       "source": "Kuehne+Nagel",
@@ -2050,8 +2931,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2024-12-13",
       "market": "Agriculture",
-      "countries": ["russia", "ukraine"],
-      "resources": ["wheat"],
+      "countries": [
+        "russia",
+        "ukraine"
+      ],
+      "resources": [
+        "wheat"
+      ],
       "headline": "Les exportations céréalières russes dépassent leur niveau d'avant-guerre, l'Ukraine reprend aussi le rythme",
       "summary": "Les deux belligérants parviennent à écouler des volumes records malgré le conflit, via des corridors et acheteurs alternatifs.",
       "source": "S&P Global",
@@ -2060,16 +2946,19 @@ svg.leaflet-image-layer.leaflet-interactive path {
     {
       "date": "2024-09-01",
       "market": "Énergie / Sanctions",
-      "countries": ["russia"],
-      "resources": ["oil"],
+      "countries": [
+        "russia"
+      ],
+      "resources": [
+        "oil"
+      ],
       "headline": "Seulement 34% du pétrole russe transporté via des tankers conformes au plafond de prix G7",
       "summary": "CREA quantifie l'ampleur du contournement des sanctions occidentales sur le pétrole russe via la flotte fantôme.",
       "source": "CREA (Centre for Research on Energy and Clean Air)",
       "url": "https://energyandcleanair.org/september-2024-monthly-analysis-of-russian-fossil-fuel-exports-and-sanctions/"
     }
   ]
-}
-</script>
+}</script>
 
 <script>/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
