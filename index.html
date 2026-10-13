@@ -783,7 +783,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   @media (max-width: 760px){
     .layout{flex-direction:column;height:auto;}
     aside.sidebar{width:100%;flex:none;max-height:none;border-right:none;border-bottom:1px solid var(--border);}
-    main.content{height:78vh;}
+    main.content{flex:none;height:78vh;min-height:480px;}
+    .timeline{left:6px;right:6px;bottom:18px;padding:6px 10px;}
+    #tl-events{max-height:44px;}
     nav.tabs{overflow-x:auto;}
     nav.tabs button{white-space:nowrap;}
   }
